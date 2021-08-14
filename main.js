@@ -1,7 +1,7 @@
 //importamos la libreria cripto para hashear
 const SHA256 = require('crypto-js/sha256');
 
-//Creamos el bloque
+//Creación del bloque
 class Block {
     constructor(index, data, previousHash = ''){
         //posiciones en la blockchain
@@ -14,7 +14,7 @@ class Block {
         this.previousHash = previousHash;
         //Hash del bloque actual
         this.hash = this.createHash();
-        //Creamos una variable que cumpla la condición de hashing
+        //Creamos una variable que cumpla la condición de hashing que determinará la dificultad de minado
         this.nonce = 0;
     }
 
